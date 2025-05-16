@@ -114,6 +114,16 @@ export default function Portfolio() {
         </div>
       </nav>
 
+      {isOpen && (
+        <ul className="md:hidden bg-white dark:bg-gray-900 px-6 pb-4">
+          <li><a href="#home" className="hover:text-blue-500">Home</a></li>
+            <li><a href="#about" className="hover:text-blue-500">About</a></li>
+            <li><a href="#projects" className="hover:text-blue-500">Projects</a></li>
+            <li><a href="#skills" className="hover:text-blue-500">Skills</a></li>
+            <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
+        </ul>
+      )}
+
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24">
         <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="https://www.w3.org/2000/svg" className="animate-draw">
