@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import {useRef} from 'react'
@@ -19,6 +19,8 @@ import blogcard from "./assets/blogcard.png"
 import prismpass from "./assets/prismpass.png"
 import socialscard from "./assets/socialscard.png"
 export default function Portfolio() {
+  const [isOpen,setIsOpen] = useState(false);
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -70,6 +72,34 @@ export default function Portfolio() {
 
   return (
     <main className="font-sans text-gray-900 bg-white dark:bg-black dark:text-white scroll-smooth">
+      {/**Hamburger Menu */}
+      <button
+          className="md:hidden text-gray-800 dark:text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            {isOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
       {/* Navbar */}
       <nav className="fixed top-0 w-full bg-white dark:bg-black shadow-md z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
