@@ -72,39 +72,31 @@ export default function Portfolio() {
 
   return (
     <main className="font-sans text-gray-900 bg-white dark:bg-black dark:text-white scroll-smooth">
-      {/**Hamburger Menu */}
-      <button
-          className="md:hidden text-gray-800 dark:text-white"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            {isOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
-      {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-white dark:bg-black shadow-md z-50">
+      {/* Top Navbar */}
+      <div className="fixed top-0 w-full bg-white dark:bg-black shadow-md z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <a href='#home' className="text-xl font-bold">Alex Creed</a>
-          <ul className="flex space-x-6 text-sm font-medium">
+          {/* Logo  */}
+          <a href="#home" className="text-xl font-bold">
+            Alex Creed
+          </a>
+
+          {/* Hamburger Button */}
+          <button
+            className="md:hidden text-gray-800 dark:text-white"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex space-x-6 text-sm font-medium">
             <li><a href="#home" className="hover:text-blue-500">Home</a></li>
             <li><a href="#about" className="hover:text-blue-500">About</a></li>
             <li><a href="#projects" className="hover:text-blue-500">Projects</a></li>
@@ -112,17 +104,18 @@ export default function Portfolio() {
             <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
           </ul>
         </div>
-      </nav>
 
-      {isOpen && (
-        <ul className="md:hidden bg-white dark:bg-gray-900 px-6 pb-4">
-          <li><a href="#home" className="hover:text-blue-500">Home</a></li>
-            <li><a href="#about" className="hover:text-blue-500">About</a></li>
-            <li><a href="#projects" className="hover:text-blue-500">Projects</a></li>
-            <li><a href="#skills" className="hover:text-blue-500">Skills</a></li>
-            <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
-        </ul>
-      )}
+        {/* Mobile Menu Dropdown */}
+        {isOpen && (
+          <div className="md:hidden bg-white dark:bg-gray-900 px-6 pb-4 space-y-2">
+            <a href="#home" onClick={() => setIsOpen(false)} className="block hover:text-blue-600">Home</a>
+            <a href="#about" onClick={() => setIsOpen(false)} className="block hover:text-blue-600">About</a>
+            <a href="#projects" onClick={() => setIsOpen(false)} className="block hover:text-blue-600">Projects</a>
+            <a href="#skills" onClick={() => setIsOpen(false)} className="block hover:text-blue-600">Skills</a>
+            <a href="#contact" onClick={() => setIsOpen(false)} className="block hover:text-blue-600">Contact</a>
+          </div>
+        )}
+      </div>
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24">
