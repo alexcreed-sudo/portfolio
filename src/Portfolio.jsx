@@ -34,7 +34,7 @@ export default function Portfolio() {
   };
 
   useEffect(() => {
-    document.title = "Your Name | Frontend Developer";
+    document.title = "Alex Creed | Frontend Developer";
   }, []);
 
   const skills = [
