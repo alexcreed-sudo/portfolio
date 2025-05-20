@@ -18,6 +18,8 @@ import visual from "./assets/visual.svg"
 import blogcard from "./assets/blogcard.png"
 import prismpass from "./assets/prismpass.png"
 import socialscard from "./assets/socialscard.png"
+
+import me from "./assets/me.jpg"
 export default function Portfolio() {
   const [isOpen,setIsOpen] = useState(false);
 
@@ -139,16 +141,33 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-[60vh] px-6 py-20 bg-gray-100 dark:bg-zinc-900 text-center">
-        <h2 className="text-3xl font-semibold mb-4">About Me</h2>
-        <p className="max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">
-          Hi, I’m Alex, a Frontend Developer passionate about building clean, responsive, and accessible websites. I specialize in HTML, CSS, JavaScript, and React, and love crafting intuitive user interfaces that not only look great but work seamlessly.
+<section id="about" className="min-h-[60vh] px-6 py-20 bg-gray-100 dark:bg-zinc-900">
+  <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-10">
+    {/* Photo Card */}
+    <div className="w-48 h-48 md:w-60 md:h-60 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-zinc-800 bg-white dark:bg-zinc-800">
+      <img
+        src={me}
+        alt="Alex"
+        className="w-full h-full object-cover"
+      />
+    </div>
 
-I sharpen my skills through real-world challenges on Frontend Mentor, where I turn professional designs into functional, pixel-perfect web projects. I'm always learning, refining my code, and staying up to date with the latest tools and best practices in modern frontend development.
+    {/* About Text */}
+    <div className="flex-1">
+      <h2 className="text-3xl font-semibold mb-4">About Me</h2>
+      <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl">
+        Hi, I’m Alex, a Frontend Developer passionate about building clean, responsive, and accessible websites. I specialize in HTML, CSS, JavaScript, and React, and love crafting intuitive user interfaces that not only look great but work seamlessly.
+        <br /><br />
+        I sharpen my skills through real-world challenges on Frontend Mentor, where I turn professional designs into functional, pixel-perfect web projects. I'm always learning, refining my code, and staying up to date with the latest tools and best practices in modern frontend development.
+        <br /><br />
+        Check out some of my work below — and feel free to reach out!
+      </p>
+    </div>
+  </div>
+</section>
 
-Check out some of my work below — and feel free to reach out!
-        </p>
-      </section>
+
+
 
       {/* Projects Section */}
 <section id="projects" className="py-16 bg-gray-100 dark:bg-gray-900 w-full">
