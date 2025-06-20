@@ -137,7 +137,7 @@ export default function Portfolio() {
         >
           <h1 className="text-4xl sm:text-6xl font-bold mb-4">Hi, I’m Alex Creed</h1>
           <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-6">
-            Frontend Developer | React | Tailwind CSS
+            Full-Stack Developer | React | Express
           </p>
           <a href="#contact" className="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition">
             Contact Me
@@ -152,7 +152,7 @@ export default function Portfolio() {
     <div >
       <h2 className="text-3xl font-semibold mb-4">About Me</h2>
       <p className="justify-center text-gray-700 dark:text-gray-300 max-w-2xl">
-        Hi, I’m Alex, a Frontend Developer passionate about building clean, responsive, and accessible websites. I specialize in HTML, CSS, JavaScript, and React, and love crafting intuitive user interfaces that not only look great but work seamlessly.
+        Hi, I’m Alex, a Frontend Developer passionate about building clean, responsive, and accessible websites. I specialize in HTML, CSS, JavaScript, TypeScript, Express, Firebase, and React, and love crafting intuitive user interfaces that not only look great but work seamlessly.
         <br /><br />
         I sharpen my skills through real-world challenges on Frontend Mentor, where I turn professional designs into functional, pixel-perfect web projects. I'm always learning, refining my code, and staying up to date with the latest tools and best practices in modern frontend development.
         <br /><br />
