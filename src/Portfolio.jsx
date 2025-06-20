@@ -256,7 +256,6 @@ export default function Portfolio() {
             <FaGithub size={24} />
           </a>
         </div>
-        © {new Date().getFullYear()} Alex Creed. All rights reserved.
       </footer>
     </main>
   );
