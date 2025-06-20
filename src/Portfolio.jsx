@@ -18,6 +18,7 @@ import visual from "./assets/visual.svg"
 import blogcard from "./assets/blogcard.png"
 import prismpass from "./assets/prismpass.png"
 import socialscard from "./assets/socialscard.png"
+import admindash from "./assets/admindash.png"
 
 import me from "./assets/me.jpg"
 export default function Portfolio() {
@@ -69,7 +70,12 @@ export default function Portfolio() {
     live: "https://social-links-azure-six.vercel.app/",
     github: "https://github.com/alexcreed-sudo/social-links",
   },
-  
+  {
+    title:"AdminDash",
+    image:admindash,
+    live:"https://admin-dash-beta-eight.vercel.app/",
+    github:"https://github.com/alexcreed-sudo/admin-dash"
+  } 
 ];
 
   return (
