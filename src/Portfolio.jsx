@@ -148,8 +148,6 @@ export default function Portfolio() {
       {/* About Section */}
 <section id="about" className="min-h-[60vh] px-6 py-20 bg-gray-100 dark:bg-zinc-900">
   <div className="container flex justify-center mx-auto items-center text-center gap-10">
-    
-
     {/* About Text */}
     <div >
       <h2 className="text-3xl font-semibold mb-4">About Me</h2>
