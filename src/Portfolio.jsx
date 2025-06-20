@@ -20,7 +20,6 @@ import prismpass from "./assets/prismpass.png"
 import socialscard from "./assets/socialscard.png"
 import admindash from "./assets/admindash.png"
 
-import me from "./assets/me.jpg"
 export default function Portfolio() {
   const [isOpen,setIsOpen] = useState(false);
 
